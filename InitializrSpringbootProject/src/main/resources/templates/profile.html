@@ -1,0 +1,15 @@
+
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Profile</title>
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Profile</h1>
+        <p th:text="${user.username}"></p>
+    </div>
+</body>
+</html>

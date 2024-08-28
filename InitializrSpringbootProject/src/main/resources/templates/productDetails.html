@@ -1,0 +1,27 @@
+
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Product Details</title>
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Product Details</h1>
+        <p th:text="${product.name}"></p>
+        <p th:text="${product.description}"></p>
+        <p th:text="${product.price}"></p>
+        <p th:text="${product.category}"></p>
+
+        <h2>Recommendations</h2>
+        <ul>
+            <li th:each="recommendation : ${recommendations}">
+                <a th:href="@{/product/{id}(id=${recommendation.id})}">
+                    <span th:text="${recommendation.name}"></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
